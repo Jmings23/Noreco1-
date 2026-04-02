@@ -1,0 +1,51 @@
+/* ── Shared pagination button styles ── */
+.pg-btn {
+    min-width: 34px; height: 34px; padding: 0 10px;
+    border: 1px solid #dde; border-radius: 8px;
+    background: #fff; color: #2d3142; font-size: 12px; font-weight: 600;
+    cursor: pointer; transition: background 0.15s, color 0.15s;
+    display: inline-flex; align-items: center; justify-content: center;
+}
+.pg-btn:hover  { background: #3399ff22; border-color: #3399ff; color: #3399ff; }
+.pg-btn.active { background: #3399ff; color: #fff; border-color: #3399ff; }
+.pg-btn:disabled { opacity: 0.4; cursor: default; pointer-events: none; }
+
+/* ===================== RESPONSIVE PAGINATION ===================== */
+
+@media (max-width: 768px) {
+    .pg-btn {
+        min-width: 30px;
+        height: 30px;
+        font-size: 11px;
+        padding: 0 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .pg-btn {
+        min-width: 28px;
+        height: 28px;
+        font-size: 10px;
+        padding: 0 6px;
+    }
+    
+    .pagination-wrapper {
+        display: flex;
+        gap: 4px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .pagination-wrapper .pg-btn {
+        flex: 0 1 auto;
+    }
+}
+
+@media (max-width: 360px) {
+    .pg-btn {
+        min-width: 24px;
+        height: 24px;
+        font-size: 9px;
+        padding: 0 4px;
+    }
+}

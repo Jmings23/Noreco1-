@@ -1,0 +1,168 @@
+/* ── Bin Card page styles (pure CSS; PHP-variable color rules stay inline) ── */
+body::before { display: none; }
+body { background: #f4f6f9; }
+.bincard-grid { display: grid; grid-template-columns: 320px 1fr; gap: 22px; align-items: start; }
+@media(max-width:900px) { .bincard-grid { grid-template-columns: 1fr; } }
+
+/* Balance box (background uses PHP accentColor — kept inline) */
+.balance-box { border-radius: 12px; padding: 20px 22px; color: white; margin-bottom: 20px; display: flex; align-items: center; gap: 16px; }
+.balance-box .bal-icon { font-size: 28px; opacity: 0.85; }
+.balance-box .bal-label { font-size: 12px; opacity: 0.8; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+.balance-box .bal-value { font-size: 32px; font-weight: 800; line-height: 1; }
+
+/* Material info */
+.mat-info { margin-bottom: 18px; }
+.mat-info h3 { font-size: 15px; font-weight: 700; color: #2d3142; margin-bottom: 4px; }
+.mat-info span { font-size: 12px; color: #768192; }
+
+/* cat-badge background uses PHP accentColor — kept inline */
+.cat-badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 11px; font-weight: 700; color: white !important; margin-left: 6px; }
+
+/* Form */
+.form-group { margin-bottom: 14px; }
+.form-group label { display: block; font-size: 12px; font-weight: 600; color: #768192; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 0.4px; }
+.form-group input { width: 100%; }
+.submit-btn { width: 100%; padding: 10px; font-size: 13px; margin-top: 4px; }
+
+/* Table */
+.table-wrap { overflow-x: auto; }
+.balance-positive { color: #2eb85c; font-weight: 700; }
+.balance-low      { color: #e55353; font-weight: 700; }
+
+/* ===================== RESPONSIVE DESIGN ===================== */
+
+@media (max-width: 1024px) {
+    .bincard-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .balance-box {
+        padding: 16px 18px;
+        gap: 12px;
+    }
+    
+    .balance-box .bal-icon {
+        font-size: 24px;
+    }
+    
+    .balance-box .bal-value {
+        font-size: 28px;
+    }
+    
+    .mat-info h3 {
+        font-size: 14px;
+    }
+    
+    .mat-info span {
+        font-size: 11px;
+    }
+    
+    .form-group {
+        margin-bottom: 12px;
+    }
+    
+    .form-group input {
+        font-size: 14px;
+        padding: 8px;
+    }
+    
+    .submit-btn {
+        padding: 9px;
+        font-size: 12px;
+    }
+    
+    .table-wrap {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+@media (max-width: 480px) {
+    .bincard-grid {
+        gap: 12px;
+    }
+    
+    .balance-box {
+        padding: 12px 14px;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    
+    .balance-box .bal-icon {
+        font-size: 20px;
+    }
+    
+    .balance-box .bal-label {
+        font-size: 10px;
+        flex: 1 100%;
+    }
+    
+    .balance-box .bal-value {
+        font-size: 24px;
+    }
+    
+    .mat-info {
+        margin-bottom: 14px;
+    }
+    
+    .mat-info h3 {
+        font-size: 13px;
+        margin-bottom: 2px;
+    }
+    
+    .mat-info span {
+        font-size: 10px;
+    }
+    
+    .cat-badge {
+        display: inline-block;
+        padding: 2px 7px;
+        font-size: 9px;
+        margin-left: 4px;
+    }
+    
+    .form-group label {
+        font-size: 11px;
+        margin-bottom: 4px;
+    }
+    
+    .form-group input {
+        font-size: 14px;
+        padding: 9px;
+        border-radius: 6px;
+    }
+    
+    .submit-btn {
+        padding: 8px;
+        font-size: 11px;
+        margin-top: 3px;
+        border-radius: 6px;
+    }
+    
+    .table-wrap table {
+        font-size: 11px;
+        min-width: 450px;
+    }
+}
+
+@media (max-width: 360px) {
+    .balance-box {
+        padding: 10px 12px;
+        gap: 8px;
+    }
+    
+    .mat-info h3 {
+        font-size: 12px;
+    }
+    
+    .form-group label {
+        font-size: 10px;
+    }
+    
+    .submit-btn {
+        font-size: 10px;
+    }
+}

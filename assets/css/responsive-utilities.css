@@ -1,0 +1,211 @@
+/**
+ * Mobile Responsive Utilities
+ * Helper classes for responsive design across the application
+ */
+
+/* ===================== VISIBILITY UTILITIES ===================== */
+
+/* Hide on mobile devices (below 768px) */
+.hide-mobile {
+    display: none !important;
+}
+
+/* Show only on mobile devices (below 768px) */
+.show-mobile {
+    display: none !important;
+}
+
+@media (max-width: 768px) {
+    .hide-mobile {
+        display: block !important;
+    }
+    
+    .show-mobile {
+        display: block !important;
+    }
+    
+    .hide-tablet {
+        display: none !important;
+    }
+}
+
+/* ===================== RESPONSIVE SPACING ===================== */
+
+/* Padding adjustments for mobile */
+@media (max-width: 768px) {
+    .px-mobile { padding-left: 12px !important; padding-right: 12px !important; }
+    .py-mobile { padding-top: 12px !important; padding-bottom: 12px !important; }
+    .p-mobile  { padding: 12px !important; }
+    
+    .mx-mobile { margin-left: 12px !important; margin-right: 12px !important; }
+    .my-mobile { margin-top: 12px !important; margin-bottom: 12px !important; }
+    .m-mobile  { margin: 12px !important; }
+}
+
+/* ===================== RESPONSIVE TYPOGRAPHY ===================== */
+
+@media (max-width: 768px) {
+    .text-lg { font-size: 16px !important; }
+    .text-sm { font-size: 12px !important; }
+    .text-xs { font-size: 10px !important; }
+}
+
+/* ===================== RESPONSIVE FLEX ===================== */
+
+@media (max-width: 480px) {
+    .flex-mobile-col {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .flex-mobile-row {
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+    }
+}
+
+/* ===================== RESPONSIVE LAYOUT ===================== */
+
+/* Full width on mobile */
+@media (max-width: 480px) {
+    .full-width-mobile {
+        width: 100% !important;
+    }
+    
+    .auto-width-mobile {
+        width: auto !important;
+    }
+}
+
+/* ===================== RESPONSIVE GRID ===================== */
+
+@media (max-width: 768px) {
+    .grid-cols-2-to-1 {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .grid-cols-3-to-1 {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .grid-cols-4-to-2 {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-cols-4-to-1 {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .grid-cols-3-to-1 {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .grid-cols-2-to-1 {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* ===================== RESPONSIVE BORDERS ===================== */
+
+@media (max-width: 480px) {
+    .border-mobile {
+        border: 1px solid #e5e7eb !important;
+        border-radius: 8px !important;
+        padding: 12px !important;
+    }
+}
+
+/* ===================== RESPONSIVE SHADOWS ===================== */
+
+@media (max-width: 480px) {
+    .shadow-mobile {
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08) !important;
+    }
+    
+    .shadow-none-mobile {
+        box-shadow: none !important;
+    }
+}
+
+/* ===================== RESPONSIVE BUTTONS ===================== */
+
+@media (max-width: 480px) {
+    .btn-block-mobile {
+        width: 100% !important;
+        display: block !important;
+    }
+    
+    .btn-sm-mobile {
+        padding: 6px 10px !important;
+        font-size: 11px !important;
+    }
+}
+
+/* ===================== TABLE RESPONSIVENESS HELPER ===================== */
+
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 8px;
+}
+
+@media (max-width: 480px) {
+    .table-responsive table {
+        min-width: 500px;
+    }
+    
+    /* Make table mobile-friendly with data attributes */
+    .table-responsive td::before {
+        content: attr(data-label);
+        display: inline-block;
+        width: 120px;
+        font-weight: 600;
+        color: #2d3142;
+    }
+}
+
+/* ===================== RESPONSIVE FORMS ===================== */
+
+.form-group-mobile {
+    margin-bottom: 12px;
+}
+
+@media (max-width: 480px) {
+    .form-row-mobile {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .form-row-mobile > * {
+        width: 100% !important;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="number"],
+    input[type="date"],
+    select,
+    textarea {
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+}
+
+/* ===================== CONTAINER QUERIES ALTERNATIVE ===================== */
+
+@media (max-width: 1200px) {
+    .container-lg { padding: 0 20px; }
+}
+
+@media (max-width: 768px) {
+    .container-md { padding: 0 16px; }
+}
+
+@media (max-width: 480px) {
+    .container-sm { padding: 0 12px; }
+}

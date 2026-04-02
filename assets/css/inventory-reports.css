@@ -1,0 +1,34 @@
+/* ── Inventory Reports page styles ── */
+@media print {
+    .sidebar, .filter-row, .no-print { display: none !important; }
+    .main { margin-left: 0 !important; }
+    body::before { display: none; }
+}
+
+/* ===================== RESPONSIVE DESIGN ===================== */
+
+@media (max-width: 768px) {
+    .filter-row {
+        flex-direction: row;
+        gap: 8px;
+    }
+    
+    .filter-row select,
+    .filter-row input {
+        flex: 1;
+        min-width: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .filter-row {
+        flex-direction: column;
+        gap: 6px;
+    }
+    
+    .filter-row select,
+    .filter-row input,
+    .filter-row label {
+        width: 100%;
+    }
+}
